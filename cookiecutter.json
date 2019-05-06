@@ -1,0 +1,15 @@
+{
+    "project_name": "My Project",
+    "project_slug": "{{ cookiecutter.project_name.lower()|replace(' ', '_')|replace('-', '_') }}",
+    "author": "Thierry Chappuis",
+    "postgres_version": [
+        "lastest",
+        "10.5",
+        "10"
+    ],
+    "postgres_user": "myuser",
+    "postgres_password": "mypass",
+    "postgres_db": "myuser",
+    "postgres_port": "15432",
+    "use_pytest": "y"
+}

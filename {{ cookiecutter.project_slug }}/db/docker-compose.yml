@@ -1,0 +1,16 @@
+version: "3"
+services:
+  postgres:
+    image: postgres:{{ cookiecutter.postgres_version }}
+    restart: always
+    ports:
+      - "{{ cookiecutter.postgres_port }}:5432"
+    environnment:
+      - POSTGRES_USER={{ cookiecutter.postgres_user }}
+      - POSTGRES_PASSWORD={{ cookiecutter.postgres_password }}
+      - POSTGRES_DB={{ cookiecutter.postgres_db }}
+    volumes:
+      - "mypostgres:/var/lib/postgresql/data"
+    
+volumes:
+  mypostgres:
